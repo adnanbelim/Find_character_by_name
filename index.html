@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Find Your Character</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Luckiest+Guy?query=luckiest">
+</head>
+<body>
+
+    <section>
+        <h1>What does your name about say your personalty?</h1>
+        <div class="centerDiv">
+            <label for="">enter your name</label><br>
+            <input type="text" name="" id="nameid">
+        </div>
+
+        <div class="imgDiv">
+            <img src="./img.png" alt="image not accessed!!" width="200" height="200" class="imgchange">
+        </div>
+
+        <button>Click Me</button>
+    </section>
+    <br>
+    <div class="creator">
+        Developed By<a href="https://www.linkedin.com/in/mohammed-adnan-belim-a36059253" target="_blank">
+        Moahammed Adnan
+        </a>
+        
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.slim.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                const nameUser = $('#nameid').val();
+                alert(nameUser);
+                $('.imgchange').attr('src', `https://joesch.moe/api/v1/${nameUser}`);
+            });
+        });
+    </script>
+</body>
+</html>
